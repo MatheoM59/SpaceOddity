@@ -24,7 +24,7 @@ export const Login = ({
       const response = await fetch("/api/login/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email: email.trim().toLowerCase(), password }),
       });
 
       const data = await response.json();
@@ -49,7 +49,7 @@ export const Login = ({
           className={styles.input}
           type="email"
           placeholder="your@email.com"
-          value={email.trim().toLowerCase()}
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
