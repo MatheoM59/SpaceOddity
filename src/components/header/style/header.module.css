@@ -9,11 +9,11 @@
   gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
   box-sizing: border-box;
-  background-color: var(--color-header);
+  background-color: var(--header);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-hair);
-  font-family: var(--font-sans);
+  border-bottom: 1px solid var(--hair);
+  font-family: var(--sans);
 }
 
 .mark {
@@ -31,8 +31,8 @@
   border-radius: 50%;
   background: radial-gradient(
     circle at 35% 30%,
-    var(--color-accent),
-    var(--color-accent-deep) 65%,
+    var(--amber),
+    var(--amber-deep) 65%,
     #7a4a12
   );
   box-shadow: 0 0 14px rgba(255, 180, 84, 0.5);
@@ -57,9 +57,9 @@
   gap: var(--space-3);
 }
 .name {
-  font-family: var(--font-serif);
+  font-family: var(--serif);
   font-size: var(--text-lg);
-  color: var(--color-text);
+  color: var(--star);
 }
 
 .image {
@@ -76,28 +76,28 @@
 
 .link {
   font-size: var(--text-sm);
-  color: var(--color-muted);
+  color: var(--muted);
   padding: var(--space-2) var(--space-3);
 }
 .link:hover {
-  color: var(--color-text);
+  color: var(--star);
 }
 
 .account {
-  font-family: var(--font-mono);
+  font-family: var(--mono);
   font-size: var(--text-xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-text);
+  color: var(--star);
   padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--color-hair-strong);
+  border: 1px solid var(--hair-strong);
   border-radius: 999px;
   transition:
     border-color 0.15s ease,
     background 0.15s ease;
 }
 .account:hover {
-  border-color: var(--color-accent);
+  border-color: var(--amber);
   background: rgba(255, 180, 84, 0.08);
 }
 

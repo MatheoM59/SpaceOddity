@@ -1,0 +1,43 @@
+.btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    transform 0.12s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+.x {
+  background-color: var(--amber);
+}
+.btnGhost {
+  background: transparent;
+  border-color: var(--hair-strong);
+  color: var(--star);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 11, 20, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: var(--space-3);
+}
+.panel {
+  background-color: var(--panel);
+  border: var(--hair);
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: var(--space-5);
+  position: relative;
+}

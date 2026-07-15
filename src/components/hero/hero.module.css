@@ -1,0 +1,101 @@
+.container {
+  display: flex; /* ← manquait : sans lui, justify/align sont ignorés */
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto; /* centre le hero */
+  justify-content: flex-end; /* contenu en bas */
+  align-items: flex-start; /* contenu à gauche */
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  min-height: 74vh;
+}
+.img {
+  object-fit: contain;
+  object-position: center;
+  z-index: 1;
+}
+.imgBlur {
+  object-fit: cover;
+  filter: blur(15px);
+  transform: scale(1.2);
+  z-index: 0;
+}
+.grade {
+  z-index: 5;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--ink) 0%, transparent 50%);
+}
+
+.content {
+  position: relative; /* ← indispensable pour que le z-index s'applique */
+  max-width: 680px;
+  padding: var(--space-5);
+  z-index: 10;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.7); /* lisibilité sur l'image */
+}
+
+.readout {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 10;
+  text-align: right;
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  line-height: 1.9;
+}
+.readout b {
+  color: var(--ice);
+  font-weight: var(--weight-normal);
+}
+.contentTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-3);
+}
+.astronomy {
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--amber);
+  color: var(--ink);
+  font-weight: var(--weight-semibold);
+}
+.date {
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.title {
+  font-family: var(--serif);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-2xl);
+  margin: 0 0 var(--space-3);
+}
+.text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* n'affiche que 3 lignes de l'explication */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: var(--star-soft);
+  overflow: hidden;
+  font-family: var(--sans);
+  font-size: var(--text-sm);
+  max-width: 56ch;
+}
+.heroAction {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  align-items: center;
+}

@@ -1,22 +1,24 @@
 :root {
-  /* Couleurs — reprises de ta maquette validée */
-  --color-bg: #080b14;
-  --color-header: rgba(8, 11, 20, 0.72); /* header translucide (effet flou) */
-  --color-panel: #121829;
-  --color-text: #f4f0e6;
-  --color-muted: #8a92a8;
-  --color-accent: #ffb454; /* ambre solaire */
-  --color-accent-deep: #f59e2c; /* ambre au survol / dégradés */
-  --color-live: #6bd6e0; /* cyan données live */
-  --color-hair: rgba(244, 240, 230, 0.09);
-  --color-hair-strong: rgba(244, 240, 230, 0.16); /* bordures + visibles */
-  --color-panel-2: #171e30; /* 2e niveau de surface */
-  --color-muted-2: #5f6884; /* texte encore plus discret */
+  /* Couleurs — noms & valeurs de la maquette */
+  --ink: #080b14;
+  --ink-2: #0e1322;
+  --header: rgba(8, 11, 20, 0.72); /* header translucide (effet flou) */
+  --panel: #121829;
+  --panel-2: #171e30; /* 2e niveau de surface */
+  --star: #f4f0e6; /* texte principal */
+  --star-soft: #cdd2e0; /* texte secondaire clair (descriptions, sur image) */
+  --muted: #8a92a8;
+  --muted-2: #5f6884; /* texte encore plus discret */
+  --amber: #ffb454; /* ambre solaire */
+  --amber-deep: #f59e2c; /* ambre au survol / dégradés */
+  --ice: #6bd6e0; /* cyan données live */
+  --hair: rgba(244, 240, 230, 0.09);
+  --hair-strong: rgba(244, 240, 230, 0.16); /* bordures + visibles */
 
   /* Typo */
-  --font-serif: "Iowan Old Style", Palatino, Georgia, serif;
-  --font-sans: system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, Menlo, monospace;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
 
   /* Tailles de texte (on tokenise ce qui se répète) */
   --text-xs: 11px; /* labels mono, eyebrows */
@@ -25,6 +27,11 @@
   --text-lg: 20px;
   --text-xl: 28px; /* titres de section */
   --text-2xl: clamp(2rem, 5vw, 3rem); /* gros titres */
+
+  /* Poids de police (ceux utilisés dans la maquette) */
+  --weight-normal: 400; /* corps de texte */
+  --weight-medium: 500; /* titres, liens de nav */
+  --weight-semibold: 600; /* badges, boutons, éléments actifs */
 
   /* Espacements (une échelle, pas des valeurs au hasard) */
   --space-1: 4px;
@@ -53,9 +60,9 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-sans);
+  background: var(--ink);
+  color: var(--star);
+  font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
 }
 a {
