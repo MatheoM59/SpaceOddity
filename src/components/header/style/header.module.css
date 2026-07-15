@@ -1,0 +1,114 @@
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  box-sizing: border-box;
+  background-color: var(--color-header);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-hair);
+  font-family: var(--font-sans);
+}
+
+.mark {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  flex: none;
+}
+/* la planète */
+.mark::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    var(--color-accent),
+    var(--color-accent-deep) 65%,
+    #7a4a12
+  );
+  box-shadow: 0 0 14px rgba(255, 180, 84, 0.5);
+}
+/* l'anneau */
+.mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 9px;
+  border: 1.5px solid rgba(244, 240, 230, 0.55);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-24deg);
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-3);
+}
+.name {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.link {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  padding: var(--space-2) var(--space-3);
+}
+.link:hover {
+  color: var(--color-text);
+}
+
+.account {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-hair-strong);
+  border-radius: 999px;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+.account:hover {
+  border-color: var(--color-accent);
+  background: rgba(255, 180, 84, 0.08);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .link {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--text-sm);
+  }
+}
