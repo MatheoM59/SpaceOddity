@@ -9,6 +9,9 @@ export const Header = () => {
           <span className={styles.name}>Space Oddity</span>
         </Link>
       </div>
+      <div>
+        <h2 className={styles.name}>Development in progress</h2>
+      </div>
       <div className={styles.links}>
         <Link href="/home" className={styles.link}>
           Home

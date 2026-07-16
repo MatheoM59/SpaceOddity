@@ -61,6 +61,11 @@
   font-size: var(--text-lg);
   color: var(--star);
 }
+.wip {
+  font-family: var(--serif);
+  font-size: var(--text-lg);
+  color: var(--star);
+}
 
 .image {
   display: flex;
