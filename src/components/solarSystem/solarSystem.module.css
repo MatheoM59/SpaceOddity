@@ -1,0 +1,20 @@
+.container {
+  max-width: var(--container);
+  width: 100%;
+}
+.header {
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+  border-bottom: solid 1px var(--hair);
+}
+.header h2 {
+  font-family: var(--serif);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-2xl);
+  margin: 0;
+}
+.sections {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-3);
+}

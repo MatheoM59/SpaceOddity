@@ -2,6 +2,7 @@ import { Header } from "@/components/header/Header";
 import styles from "./page.module.css";
 import { getApod } from "@/lib/nasa";
 import { Hero } from "@/components/hero/Hero";
+import { SolarSystem } from "@/components/solarSystem/SolarSystem";
 
 export default async function Home() {
   const apod = await getApod();
@@ -9,6 +10,7 @@ export default async function Home() {
     <div className={styles.container}>
       <Header />
       <Hero apod={apod} />
+      <SolarSystem />
     </div>
   );
 }

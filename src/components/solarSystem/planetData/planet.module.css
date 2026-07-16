@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.planetOrb {
+  /* --planet-color est injecté en inline depuis le TSX (couleur de la planète) */
+  background: radial-gradient(
+    circle at 34% 30%,
+    var(--planet-color),
+    rgb(26, 26, 34) 88%
+  );
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-ring);
+  flex: none;
+  box-shadow:
+    inset -14px -10px 30px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(0, 0, 0, 0.4);
+  transition: background 0.4s;
+}
+.data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3) var(--space-4);
+  flex: 1;
+}
+.facts .k {
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.facts .v {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  color: var(--star);
+  margin-top: 2px;
+}
+
+.facts .v small {
+  color: var(--muted);
+  font-size: 0.7em;
+}

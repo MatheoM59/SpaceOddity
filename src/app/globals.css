@@ -44,7 +44,8 @@
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 20px;
-
+  --radius-xxlg: 999px;
+  --radius-ring: 50%;
   /* Ombres */
   --shadow-glow: 0 10px 30px rgba(255, 180, 84, 0.32);
 
