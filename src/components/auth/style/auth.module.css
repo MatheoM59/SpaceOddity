@@ -3,31 +3,57 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: var(--space-4);
+  box-sizing: border-box;
+  font-family: var(--sans);
+  /* halos ambre + cyan sur fond encre : l'ambiance du site */
   background:
     radial-gradient(
-      1000px 600px at 50% -20%,
-      rgba(99, 102, 241, 0.28),
+      900px 500px at 50% -10%,
+      rgba(255, 180, 84, 0.16),
       transparent 60%
     ),
     radial-gradient(
-      800px 500px at 100% 120%,
-      rgba(168, 85, 247, 0.2),
+      700px 500px at 100% 110%,
+      rgba(107, 214, 224, 0.12),
       transparent 55%
     ),
-    #05060f;
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+    var(--ink);
 }
 
 .card {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   max-width: 420px;
-  padding: 40px 32px;
-  border-radius: 20px;
-  background: rgba(17, 19, 34, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(14px);
+  padding: var(--space-5);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--panel), var(--ink-2));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* le même quadrillage discret que les panneaux du site */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--hair) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hair) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.35;
+  mask-image: radial-gradient(120% 100% at 100% 0%, #000, transparent 70%);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--space-3);
+  }
+
+  .card {
+    padding: var(--space-4);
+  }
 }
