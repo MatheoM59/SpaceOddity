@@ -25,6 +25,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3) var(--space-4);
   flex: 1;
+  min-width: 0; /* autorise le contenu à rétrécir au lieu de déborder */
 }
 .facts .k {
   font-family: var(--mono);
@@ -43,4 +44,22 @@
 .facts .v small {
   color: var(--muted);
   font-size: 0.7em;
+}
+
+/* Mobile : l'orbe passe au-dessus des données au lieu d'être à côté */
+@media (max-width: 460px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .planetOrb {
+    width: 72px;
+    height: 72px;
+  }
+
+  .data {
+    width: 100%;
+  }
 }

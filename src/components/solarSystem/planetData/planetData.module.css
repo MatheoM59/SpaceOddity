@@ -37,30 +37,6 @@
   margin: var(--space-3) 0 var(--space-4);
 }
 
-.btn {
-  appearance: auto;
-  text-rendering: auto;
-  color: buttontext;
-  letter-spacing: normal;
-  word-spacing: normal;
-  line-height: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  cursor: default;
-  box-sizing: border-box;
-  background-color: buttonface;
-  margin: 0em 0em 0em 0em;
-  padding-block: 1px;
-  padding-inline: 6px;
-  border-width: 2px;
-  border-style: outset;
-  border-color: buttonborder;
-  border-image: initial;
-}
-
 .planet {
   font-family: var(--mono);
   font-size: var(--text-sm);
@@ -86,4 +62,21 @@
 .active:hover {
   color: var(--ink);
   border-color: var(--muted);
+}
+
+/* Tablette / mobile : le panneau prend toute la largeur de la grille */
+@media (max-width: 860px) {
+  .planetContainer {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .planetContainer {
+    padding: var(--space-3);
+  }
+
+  .planet {
+    padding: var(--space-1) var(--space-2);
+  }
 }

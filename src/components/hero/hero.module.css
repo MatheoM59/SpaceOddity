@@ -1,8 +1,8 @@
 .container {
   display: flex; /* ← manquait : sans lui, justify/align sont ignorés */
   flex-direction: column;
-  width: 100%;
-  max-width: var(--container);
+  /* gouttières latérales sur petit écran, plafonné à --container sur grand */
+  width: min(calc(100% - 2 * var(--space-3)), var(--container));
   margin: 0 auto; /* centre le hero */
   justify-content: flex-end; /* contenu en bas */
   align-items: flex-start; /* contenu à gauche */
@@ -48,6 +48,7 @@
   font-size: var(--text-xs);
   color: var(--muted);
   line-height: 1.9;
+  max-width: 45%; /* le copyright peut être très long → il passe à la ligne */
 }
 .readout b {
   color: var(--ice);
@@ -57,7 +58,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--space-3);
+  flex-wrap: wrap; /* le badge + la date passent à la ligne si besoin */
+  gap: var(--space-2) var(--space-3);
 }
 .astronomy {
   font-family: var(--mono);
@@ -99,4 +101,19 @@
   gap: var(--space-3);
   flex-wrap: wrap;
   align-items: center;
+}
+
+@media (max-width: 640px) {
+  .container {
+    min-height: 60vh; /* un hero moins haut sur mobile */
+  }
+
+  .content {
+    padding: var(--space-3);
+  }
+
+  /* le relevé n'a pas la place sur mobile : le contenu du bas suffit */
+  .readout {
+    display: none;
+  }
 }

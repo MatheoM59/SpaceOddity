@@ -10,7 +10,7 @@ export const Header = () => {
         </Link>
       </div>
       <div>
-        <h2 className={styles.name}>Development in progress</h2>
+        <h2 className={styles.wip}>Development in progress</h2>
       </div>
       <div className={styles.links}>
         <Link href="/home" className={styles.link}>

@@ -65,6 +65,8 @@
   font-family: var(--serif);
   font-size: var(--text-lg);
   color: var(--star);
+  margin: 0; /* un <h2> a des marges par défaut */
+  white-space: nowrap;
 }
 
 .image {
@@ -106,14 +108,29 @@
   background: rgba(255, 180, 84, 0.08);
 }
 
+/* Tablette : la bannière "Development in progress" ne rentre plus */
+@media (max-width: 1000px) {
+  .wip {
+    display: none;
+  }
+}
+
+/* Mobile : les liens texte laissent la place au logo + Account */
 @media (max-width: 640px) {
   .container {
     padding: var(--space-2) var(--space-3);
     gap: var(--space-2);
   }
 
+  .name {
+    font-size: var(--text-base);
+  }
+
+  .links {
+    gap: var(--space-2);
+  }
+
   .link {
-    padding: var(--space-1) var(--space-2);
-    font-size: var(--text-sm);
+    display: none;
   }
 }
