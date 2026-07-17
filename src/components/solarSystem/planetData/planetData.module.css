@@ -55,6 +55,24 @@
   border-color: var(--muted);
 }
 
+.systemImg {
+  display: block;
+  width: 100%;
+  height: 120px; /* bande compacte : le cover recadre le vide au-dessus/dessous */
+  object-fit: cover;
+  margin-top: var(--space-3);
+  /* le fond noir de la photo se fond dans le panneau (les pixels sombres
+     deviennent transparents) ; le masque adoucit les bords restants */
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+}
+
 /* Tablette / mobile : le panneau prend toute la largeur de la grille */
 @media (max-width: 860px) {
   .planetContainer {

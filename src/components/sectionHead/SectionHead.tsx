@@ -10,7 +10,7 @@ export const SectionHead = ({
   return (
     <div className={styles.container}>
       <h2>{title}</h2>
-      <Link href={"/"} className={styles.link}>
+      <Link href={"/live"} className={styles.link}>
         {text}
       </Link>
     </div>

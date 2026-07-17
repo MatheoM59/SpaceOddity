@@ -19,7 +19,7 @@ export const Header = () => {
         <Link href="/home" className={styles.link}>
           Explore
         </Link>
-        <Link href="/home" className={styles.link}>
+        <Link href="/live" className={styles.link}>
           Live
         </Link>
         <Link href="/home" className={styles.link}>

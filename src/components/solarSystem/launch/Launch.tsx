@@ -1,12 +1,11 @@
 import { CardHead } from "@/components/cardHead/CardHead";
-import { getNextLaunch } from "@/lib/launch";
 import styles from "./launch.module.css";
 import { LaunchModal } from "./LaunchModal";
 import { LaunchCounter } from "./LaunchCounter";
+import type { Launch } from "@/lib/launch";
 
-export const Launch = async () => {
+export const LaunchCard = ({ nextLaunch }: { nextLaunch: Launch }) => {
   const content = "Next launch";
-  const nextLaunch = await getNextLaunch();
   if (!nextLaunch) {
     return (
       <div className={styles.container}>

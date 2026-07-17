@@ -5,6 +5,7 @@ import { PlanetFich } from "./Planet";
 import styles from "./planetData.module.css";
 import { useState } from "react";
 import { CardHead } from "@/components/cardHead/CardHead";
+import Image from "next/image";
 
 export const PlanetData = () => {
   const [selected, setSelected] = useState<Planet>(planets[2]);
@@ -25,6 +26,13 @@ export const PlanetData = () => {
         ))}
       </div>
       <PlanetFich selectedPlanet={selected} />
+      <Image
+        src="/sytstem.png"
+        alt="Solar system"
+        width={500}
+        height={250}
+        className={styles.systemImg}
+      />
     </div>
   );
 };
