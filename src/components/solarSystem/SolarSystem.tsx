@@ -13,7 +13,7 @@ export const SolarSystem = async () => {
       <SectionHead title={title} text={text} />
       <div className={styles.sections}>
         <PlanetData />
-        <LaunchCard nextLaunch={nextLaunch} />
+        {nextLaunch ? <LaunchCard nextLaunch={nextLaunch} /> : <div></div>}
       </div>
     </div>
   );
