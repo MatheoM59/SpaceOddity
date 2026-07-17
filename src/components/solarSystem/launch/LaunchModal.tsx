@@ -7,8 +7,7 @@ import { useState } from "react";
 import { LaunchCounter } from "./LaunchCounter";
 
 export const LaunchModal = ({ launch }: { launch: Launch }) => {
-  const [open, setOpen] = useState(true);
-  console.log({ flightclub_url: launch.flightclub_url });
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -39,7 +38,9 @@ export const LaunchModal = ({ launch }: { launch: Launch }) => {
                   <h1 className={styles.title}>{launch.mission?.name}</h1>
                   <h2 className={styles.chip}>{launch.mission?.type}</h2>
                   <p className={styles.statusName}>{launch.status.name}</p>
-                  <p className={styles.statusDesc}>{launch.status.description}</p>
+                  <p className={styles.statusDesc}>
+                    {launch.status.description}
+                  </p>
                 </div>
               </div>
               <div className={styles.infoRow}>
