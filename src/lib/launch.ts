@@ -7,7 +7,8 @@ export type Launch = {
   webcast_live: boolean;
   probability: number | null; // ⚠️ null ou -1 = inconnu
   status: { name: string; description: string };
-  net_precision: { name: string } | null; // ex: "Minute", "Day", "Month"
+  net_precision: { name: string } | null;
+  flightclub_url: string;
   mission: {
     name: string;
     type: string; // ex: "Communications", "Human Exploration", "Unknown"
