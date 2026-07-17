@@ -35,7 +35,19 @@ export const LaunchModal = ({ launch }: { launch: Launch }) => {
             <div className={styles.info}>
               <div className={styles.infoRow}>
                 <div className={styles.rowContent}>
-                  <h1 className={styles.title}>{launch.mission?.name}</h1>
+                  <div className={styles.titleRow}>
+                    <h1 className={styles.title}>{launch.mission?.name}</h1>
+                    {launch.vidURLs[0] && (
+                      <a
+                        href={launch.vidURLs[0].url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${styles.watch} ${launch.webcast_live ? styles.live : ""}`}
+                      >
+                        Watch
+                      </a>
+                    )}
+                  </div>
                   <h2 className={styles.chip}>{launch.mission?.type}</h2>
                   <p className={styles.statusName}>{launch.status.name}</p>
                   <p className={styles.statusDesc}>
