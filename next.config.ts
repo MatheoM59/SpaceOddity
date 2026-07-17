@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "apod.nasa.gov",
         pathname: "/apod/image/**",
       },
+      {
+        protocol: "https",
+        hostname: "thespacedevs-prod.nyc3.digitaloceanspaces.com",
+        pathname: "/media/**",
+      },
     ],
   },
 };

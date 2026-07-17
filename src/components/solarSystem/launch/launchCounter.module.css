@@ -1,0 +1,12 @@
+.container {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-2xl);
+  letter-spacing: 0.02em;
+  margin: var(--space-3) 0;
+  color: var(--star);
+}
+
+.container span {
+  color: var(--amber);
+}

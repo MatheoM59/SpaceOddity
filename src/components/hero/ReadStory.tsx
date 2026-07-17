@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./readStory.module.css";
+import { OpenBtn } from "../openBtn/openBtn";
 
 export const ReadStory = ({
   title,
@@ -13,12 +14,7 @@ export const ReadStory = ({
 
   return (
     <>
-      <button
-        className={`${styles.btn} ${styles.btnGhost}`}
-        onClick={() => setOpen(true)}
-      >
-        Read the full story
-      </button>
+      <OpenBtn content={"Read the full story"} setOpen={setOpen} />
 
       {open && (
         <div className={styles.overlay} onClick={() => setOpen(false)}>

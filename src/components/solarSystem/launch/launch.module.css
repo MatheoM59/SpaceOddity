@@ -1,0 +1,67 @@
+.container {
+  grid-column: span 2;
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-4);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, var(--panel), var(--ink-2));
+}
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--hair) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hair) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.35;
+  mask-image: radial-gradient(120% 100% at 100% 0%, #000, transparent 70%);
+}
+.content {
+  margin-top: var(--space-3);
+  width: 100%;
+  height: 100%;
+}
+.noLaunch {
+  margin-top: auto;
+}
+
+.countLabel {
+  letter-spacing: 0.18em;
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.mission {
+  margin-top: var(--space-3);
+  font-size: var(--text-base);
+}
+.mission span {
+  color: var(--muted);
+}
+.missionRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--mono);
+  font-size: var(--text-base);
+  color: var(--muted);
+  border-top: 1px solid var(--hair);
+  padding-top: var(--space-2);
+  margin-top: var(--space-2);
+}
+.missionRow span:first-child {
+  flex: none;
+}
+.missionRow span:last-child {
+  text-align: right;
+  color: var(--star);
+}
+@media (max-width: 860px) {
+  .container {
+    grid-column: 1 / -1;
+  }
+}

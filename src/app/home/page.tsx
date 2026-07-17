@@ -9,7 +9,11 @@ export default async function Home() {
   return (
     <div className={styles.container}>
       <Header />
-      <Hero apod={apod} />
+      {apod ? (
+        <Hero apod={apod} />
+      ) : (
+        <div>⚠️ Sorry the picture of the day is temporally unavailable</div>
+      )}
       <SolarSystem />
     </div>
   );

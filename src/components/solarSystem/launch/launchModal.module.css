@@ -18,6 +18,7 @@
   left: var(--space-3);
   background-color: var(--amber);
   color: var(--ink); /* sinon texte clair sur ambre, peu lisible */
+  z-index: 20;
 }
 
 .overlay {
@@ -32,11 +33,23 @@
 }
 .panel {
   background-color: var(--panel);
+  width: 100%;
+  min-height: 74vh;
   border: solid 1px var(--hair);
   border-radius: var(--radius-lg);
-  max-width: 600px;
   max-height: 80vh;
   overflow-y: auto;
-  padding: var(--space-5);
   position: relative;
+  display: grid;
+}
+.imageContainer {
+  min-height: 100%;
+}
+.img {
+  object-fit: contain;
+  object-position: left;
+  z-index: 1;
+}
+.info {
+  max-width: 50%;
 }

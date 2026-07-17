@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Space Oddity",
-  description: "Explore the universe every day.!",
+  description: "Explore the universe every day !",
 };
 
 export default function RootLayout({
